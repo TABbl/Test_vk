@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /api.testvk.ru/
+RewriteRule ^(.*)$ routing.php?q=$1 [L,QSA]
+
+
