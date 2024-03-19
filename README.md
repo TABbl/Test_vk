@@ -29,9 +29,10 @@
    </Directory>
    ```
 
-   Для этого можно использовать команду:
+   Для этого используйте команды:
    ```bash
-   sudo nano etc/apache2/apache2.conf
+   sudo cd /etc/apache2
+   sudo nano apache2.conf
    ```
 
    Это необходимо для корректной работы перенаправления при обращении к разным URI API.
