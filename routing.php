@@ -14,13 +14,12 @@ switch ($action) {
         if ($method == 'POST') {
             $name = $_POST['name'];
             $password = $_POST['password'];
-            // Пример использования UserController для создания пользователя
             $userController = new UserController();
             $result = $userController->createUser($name, $password);
             echo json_encode($result);
         }
         elseif ($method == 'GET' && $id && $params[2] == 'quests') {
-            // Пример использования QuestController для получения истории заданий пользователя
+            
             
             $userController = new UserController();
             $result = $userController->getUserQuestsHistory($id);
@@ -34,7 +33,6 @@ switch ($action) {
     case 'quests':
         if ($method == 'POST' && $id && $params[2] == 'complete') {
             $userID = $_POST['user_id'];
-            // Пример использования QuestController для завершения задания
             $questController = new QuestController();
             $result = $questController->completeQuest($userID, $id);
             echo json_encode($result);
@@ -44,7 +42,6 @@ switch ($action) {
             $name = $_POST['name'];
             $body = $_POST['body'];
             $cost = $_POST['cost'];
-            // Пример использования QuestController для создания задания
             $questController = new QuestController();
             $result = $questController->createQuest($name, $body, $cost);
             echo json_encode($result);

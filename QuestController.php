@@ -1,34 +1,4 @@
-
-
-
 <?php
-//require '../connect.php';
-
-//class QuestController{
-//    public function createQuest($questData) {
-        // Логика для создания нового пользователя в базе данных
-//    }
-
-//    public function getQuest($connect) {
-        // Логика для получения информации о пользователе из базы данных
-//        $quests = mysqli_query($connect, "SELECT * FROM Quests");
-//        $questsList = [];
-//        while($quest = mysqli_fetch_assoc($quests)){
-//            $questsList[] = $quest;
-//        }
-    
-//        echo json_encode($questsList);
-//    }
-
-//    public function updateQuest($questID, $userData) {
-        // Логика для обновления информации о пользователе в базе данных
-//    }
-
-//    public function deleteQuest($questID) {
-//        // Логика для удаления пользователя из базы данных
-//    }
-//}
-
 
 require 'connect.php';
 
