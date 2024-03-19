@@ -3,55 +3,57 @@
 Задание выполнял на чистом php, использовал сервер apache2, поэтому расскажу как его настроить для работы с API. Выполните следующие шаги для запуска API:
 
 1. Перейдите в директорию:
-   
+   ```bash
    cd /var/www/html
+   ```
 
 2. Склонируйте репозиторий:
-
+   ```bash
    sudo git clone https://github.com/TABbl/Test_vk 
+   ```
 
    (Если не получается склонировать репозиторий из-за прав доступа, то попробуйте изменить их, выполнив команду:
-
+   ```bash
    sudo chmod 777 /var/www/html 
-
+   ```
 
 3. Для восстановления базы данных из дампа, который находится в проекте, выполните:
-
+   ```bash
    mysql -u username -p test_for_vk < database_dump.sql
-
+   ```
 
 4. Необходимо внести следующее в файл apache2.conf:
-
-//   <Directory /var/www/html>
-//  AllowOverride All
-//   </Directory>
-
+   ```apache
+   <Directory /var/www/html>
+   AllowOverride All
+   </Directory>
+   ```
 
    Для этого можно использовать команду:
-
+   ```bash
    sudo nano etc/apache2/apache2.conf
-
+   ```
 
    Это необходимо для корректной работы перенаправления при обращении к разным URI API.
 
 5. Также необходимо выполнить:
-
+   ```bash
    sudo a2enmod rewrite
-
+   ```
    и затем:
-
+   ```bash
    sudo systemctl reload apache2
-
+   ```
 
    Если apache2 не запущен, то выполните:
-
+   ```bash
    sudo systemctl start apache2
-
+   ```
 
    Если сервер не запускается, то удостоверьтесь, что 80 порт не занят никаким другим процессом:
-
+   ```bash
    sudo netstat -tuln | grep :80
-
+   ```
 
 В Postman:
 
