@@ -22,9 +22,9 @@
 
 4. Необходимо внести следующее в файл apache2.conf:
 
-   <Directory /var/www/html>
-   AllowOverride All
-   </Directory>
+#   <Directory /var/www/html>
+#   AllowOverride All
+#   </Directory>
 
 
    Для этого можно использовать команду:
